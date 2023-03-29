@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CDL Checkout</title>
+  </head>
+  <body>
+    <form>
+      <label for="item">Item</label>
+      <input type="text" id="item" name="item" />
+
+      <button type="button" onclick="addItemToBasket()">Add Item</button>
+    </form>
+    <p>Total: <span id="total">0</span></p>
+    <button type="button" onclick="checkout()"></button>
+  </body>
+</html>

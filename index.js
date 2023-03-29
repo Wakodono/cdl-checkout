@@ -34,9 +34,16 @@ const calculateTotal = () => {
     return total;
 }
 
-// Test the checkout system with some example items
+// Checkout and display the final total
+
+const checkout = () => {
+    const total = calculateTotal();
+    document.getElementById("total").textContent = total;
+}
+
+/* // Test the checkout system with some example items
 addItemToBasket('A');
 addItemToBasket('B');
 addItemToBasket('C');
 addItemToBasket('A');
-console.log(`Total price: ${calculateTotal()} pence`); // Expected output: "Total price: 150 pence"
+console.log(`Total price: ${calculateTotal()} pence`); // Expected output: "Total price: 150 pence" */
