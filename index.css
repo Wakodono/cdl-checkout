@@ -26,7 +26,6 @@ main {
   border-radius: 3px;
   border-style: solid;
   cursor: pointer;
-  display: inline-block;
   vertical-align: top;
   white-space: nowrap;
   text-decoration: none;

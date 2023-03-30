@@ -18,6 +18,13 @@ const addItemToBasket = (item) => {
     }
 }
 
+// Update and display the total price of items in the basket
+const updateDisplay = () => {
+    const basket = document.getElementById("basket");
+    const totalPrice = calculateTotal().toLocaleString('en-GB', { style: 'currency', currency: 'GBP' });
+    basket.textContent = `${totalPrice}`;
+}
+
 // Calculate the total price of the items in the basket
 const calculateTotal = () => {
     let total = 0;
@@ -31,19 +38,47 @@ const calculateTotal = () => {
             total += basket[item] * pricingRules[item].unitPrice;
         }
     }
-    return total;
+    return '£' + (total / 100).toFixed(2);
 }
 
-// Add event listener to the add button
-const addButton = document.getElementById("add-button");
-addButton.addEventListener("click", () => {
+// Add event listener to the button
+const button = document.getElementById("add-button");
+button.addEventListener("click", () => {
+    // get the value of the input field
     const itemInput = document.querySelector("input[name='item']");
     const item = itemInput.value.toUpperCase();
+
+    // add the item to the basket
     addItemToBasket(item);
-    const basketDiv = document.getElementById("basket");
-    basketDiv.innerHTML = `Total: ${calculateTotal()}`;
-    itemInput.value = "";
+
+    // update the display
+    updateDisplay()
+
+    // clear input field
+    itemInput.value = '';
 });
+
+//To handle the form being submitted on the press of the "Enter" key
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // get the value of the input field
+    const input = document.getElementById('item');
+
+    const item = input.value.toUpperCase();
+
+    //add the item to the basket
+    addItemToBasket(item);
+
+    // Update display
+    updateDisplay();
+
+    // clear input field
+    itemInput.value = '';
+});
+
 
 /* // Test the checkout system with some example items
 addItemToBasket('A');
