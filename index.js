@@ -34,12 +34,16 @@ const calculateTotal = () => {
     return total;
 }
 
-// Checkout and display the final total
-
-const checkout = () => {
-    const total = calculateTotal();
-    document.getElementById("total").textContent = total;
-}
+// Add event listener to the add button
+const addButton = document.getElementById("add-button");
+addButton.addEventListener("click", () => {
+    const itemInput = document.querySelector("input[name='item']");
+    const item = itemInput.value.toUpperCase();
+    addItemToBasket(item);
+    const basketDiv = document.getElementById("basket");
+    basketDiv.innerHTML = `Total: ${calculateTotal()}`;
+    itemInput.value = "";
+});
 
 /* // Test the checkout system with some example items
 addItemToBasket('A');

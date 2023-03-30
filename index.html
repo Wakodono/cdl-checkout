@@ -4,16 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <script type="module" defer src="./index.js"></script>
     <title>CDL Checkout</title>
   </head>
   <body>
-    <form>
-      <label for="item">Item</label>
-      <input type="text" id="item" name="item" />
-
-      <button type="button" onclick="addItemToBasket()">Add Item</button>
-    </form>
-    <p>Total: <span id="total">0</span></p>
-    <button type="button" onclick="checkout()"></button>
+    <main>
+      <form>
+        <label>
+          Item:
+          <input type="text" id="item" name="item" />
+        </label>
+        <button type="button" id="add-button">Add Item to cart</button>
+      </form>
+      <div id="basket"></div>
+    </main>
   </body>
 </html>
