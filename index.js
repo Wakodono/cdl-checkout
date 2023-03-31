@@ -22,7 +22,7 @@ const addItemToBasket = (item) => {
 const updateDisplay = () => {
     const basket = document.getElementById("basket");
     const totalPrice = calculateTotal();
-    basket.textContent = `${totalPrice}`;
+    basket.textContent = `Total: ${totalPrice}`;
 }
 
 // Calculate the total price of the items in the basket
@@ -57,6 +57,14 @@ button.addEventListener("click", () => {
     // clear input field
     itemInput.value = '';
 });
+
+// Add event listener to empty cart button
+const emptyCartButton = document.getElementById("empty-button");
+emptyCartButton.addEventListener("click", () => {
+    // clear the basket
+    document.getElementById("basket").innerHTML = '';
+})
+
 
 //To handle the form being submitted on the press of the "Enter" key
 const form = document.querySelector('form');

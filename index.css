@@ -18,6 +18,10 @@ main {
   height: 50vh;
 }
 
+form {
+  margin-bottom: 10px;
+}
+
 #add-button {
   background-color: #f0c14b;
   background-image: linear-gradient(to bottom, #f7dfa5, #f0c14b);
@@ -29,6 +33,24 @@ main {
   font-weight: bold;
   height: 25px;
   line-height: 29px;
+  margin: 0;
+  padding: 0 10px;
+  border-radius: 3px;
+  border-style: solid;
+  cursor: pointer;
+  vertical-align: top;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+#empty-button {
+  background-color: red;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+  color: #111;
+  font-size: 16px;
+  height: 25px;
+  line-height: 29px;
+  font-weight: bold;
   margin: 0;
   padding: 0 10px;
   border-radius: 3px;
