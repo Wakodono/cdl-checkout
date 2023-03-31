@@ -21,7 +21,7 @@ const addItemToBasket = (item) => {
 // Update and display the total price of items in the basket
 const updateDisplay = () => {
     const basket = document.getElementById("basket");
-    const totalPrice = calculateTotal().toLocaleString('en-GB', { style: 'currency', currency: 'GBP' });
+    const totalPrice = calculateTotal();
     basket.textContent = `${totalPrice}`;
 }
 
@@ -76,7 +76,9 @@ form.addEventListener('submit', function (event) {
     updateDisplay();
 
     // clear input field
-    itemInput.value = '';
+    input.value = '';
+
+
 });
 
 
