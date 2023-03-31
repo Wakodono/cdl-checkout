@@ -33,5 +33,5 @@ This is a simple checkout system that handles pricing schemes such as "apples co
 
 ## Installation & Usage
 
-To use the checkout system, simply clone the repository and open the index.html file in a web browser. You can also access the live demo of the system [here](https://wakodono.github.io/cdl-checkout/).
+To use the checkout system, simply clone the repository and open the index.html file in a web browser. You can also access the live demo of the system [here](https://wakodono.github.io/cdl-checkout/){:target="_blank"}.
 
