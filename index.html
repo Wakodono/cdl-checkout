@@ -13,11 +13,57 @@
     <title>CDL Checkout</title>
   </head>
   <body>
+    <header>
+      <div class="instructions">
+        <h1>CDL CHECKOUT</h1>
+
+        <p>
+          This is a simple checkout system that handles pricing schemes such as
+          "apples cost 50 pence, three apples cost £1.30." It allows items to be
+          added to a basket in any order, and calculates the total price based
+          on a set of pricing rules.
+        </p>
+        <p>You may choose from 4 items A, B, C, or D</p>
+
+        <table>
+          <tr>
+            <th>Item</th>
+            <th>Unit Price</th>
+          </tr>
+          <tr>
+            <td>A</td>
+            <td>£50p</td>
+          </tr>
+          <tr>
+            <td>B</td>
+            <td>45p</td>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td>20p</td>
+          </tr>
+          <tr>
+            <td>D</td>
+            <td>15p</td>
+          </tr>
+        </table>
+
+        <h2>Offers</h2>
+        <p>Get A x3 for £1.30</p>
+        <p>Get B x2 for 45p</p>
+      </div>
+    </header>
     <main>
       <form>
         <label>
           Choose an Item:
-          <input type="text" id="item" name="item" />
+          <input
+            type="text"
+            id="item"
+            name="item"
+            pattern="[ABCD]{1}"
+            required
+          />
         </label>
         <button type="button" id="add-button">Add Item to cart</button>
       </form>

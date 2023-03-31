@@ -3,11 +3,19 @@ body {
   color: #fff;
 }
 
-main {
+header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
 }
 
 #add-button {
